@@ -20,7 +20,7 @@ sudo usermod -aG docker ${USER} && \
 newgrp docker
 
 # Fetch benchmark tool for SSD_AMP
-wget https://raw.githubusercontent.com/lambdal/deeplearning-benchmark/master/pytorch/Makefile
+wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/lambdal/deeplearning-benchmark/master/pytorch/Makefile
 
 # Set the path to store code and data
 export PATH_STORAGE=/home/ubuntu
@@ -48,7 +48,7 @@ export NAME_DATASET=all # Set to all to prepare all datasets. You can also selec
 sudo usermod -aG docker $USER && \
 newgrp docker
 
-wget https://raw.githubusercontent.com/lambdal/deeplearning-benchmark/master/pytorch/setup.sh && \
+wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/lambdal/deeplearning-benchmark/master/pytorch/setup.sh && \
 chmod +x setup.sh && \
 ./setup.sh $NAME_NGC
 
@@ -203,13 +203,13 @@ docker pull nvcr.io/nvidia/${NAME_NGC}
 
 ```
 # Lambda's fork of DeepLearningExamples (a few patches to make sure they work with the recent NGC)
-git clone https://github.com/LambdaLabsML/DeepLearningExamples.git && \
+git clone https://mirror.ghproxy.com/https://github.com/LambdaLabsML/DeepLearningExamples.git && \
 cd DeepLearningExamples && \
 git checkout lambda/benchmark && \
 cd ..
 
 # Clone this repo for streamlining the benchmark
-git clone https://github.com/lambdal/deeplearning-benchmark.git && \
+git clone https://mirror.ghproxy.com/https://github.com/lambdal/deeplearning-benchmark.git && \
 cd deeplearning-benchmark/pytorch
 ```
 
